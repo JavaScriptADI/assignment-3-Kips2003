@@ -23,6 +23,24 @@ console.log -ს რომ გადაცემთ ამ ფუნქცია
 # # # # 
 */
 
-let str = " # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # ";
+function MirrorString(str){
+    let result = "";
+    for(let i = str.length-1; i > 0; i--){
+        result += str[i];
+    }
+    
+    return result;
+}
 
-console.log(str);
+
+let row = " # # # #";
+let i = 0;
+
+while (i < 8){
+    if(!(i%2))
+        console.log(row);
+    else
+        console.log(MirrorString(row));
+
+    i++;
+}
