@@ -22,3 +22,25 @@ console.log -ს რომ გადაცემთ ამ ფუნქცია
  # # # #
 # # # # 
 */
+
+function MirrorString(str){
+    let result = "";
+    for(let i = str.length-1; i > 0; i--){
+        result += str[i];
+    }
+    
+    return result;
+}
+
+
+let row = " # # # #";
+let i = 0;
+
+while (i < 8){
+    if(!(i%2))
+        console.log(row);
+    else
+        console.log(MirrorString(row));
+
+    i++;
+}
